@@ -4,7 +4,7 @@ import google.generativeai as genai
 
 st.title("Gemini Bot")
 
-os.environ['GOOGLE_API_KEY'] = "YOUR_API_KEY"
+os.environ['GOOGLE_API_KEY'] = "GOOGLE_API_KEY"
 genai.configure(api_key = os.environ['GOOGLE_API_KEY'])
 model = genai.GenerativeModel('gemini-pro')
 if "messages" not in st.session_state:
