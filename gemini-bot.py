@@ -18,7 +18,7 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-# Process and store Query and Response
+# Processing and store Query & Response
 def llm_function(query):
     response = model.generate_content(query)
     with st.chat_message("assistant"):
@@ -36,7 +36,7 @@ def llm_function(query):
         }
     )
 
-# Accept user input
+# Accept the user input
 query = st.chat_input("What's up?")
 
 # Calling the Function when Input is Provided
