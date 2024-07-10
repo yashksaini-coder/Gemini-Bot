@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Mukta:wght@200;300;400;500;600;700;800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+input#image{
+    display: none;
+}
+div.user img#query_img, div.user img#query_temp_img{
+    margin-top: 0.8rem !important;
+    height: 150px;
+    border-radius: 10px !important;
+}
+div.user img#query_temp_img{
+    margin-bottom: 1.5rem;
+}
+div#query_area button#submit, div#query_area label[for='image']{
+    position: absolute;
+    height: min-content;
+    padding: 0 !important;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    outline: none;
+    padding: 0.1rem 0.2rem !important;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 7;
+    color: rgb(0, 0, 0);
+}
+div#query_area button#submit{
+    right: 0.85rem
+}
+div#query_area label[for='image']{
+    right: 3.3rem;
+}
+div.chat div.user p{
+    margin-top: 0.3rem;
+}
+@media screen and (max-width: 640px) {
+    div.user img#query_img, div.user img#query_temp_img{
+        height: 120px;
+    }
+}

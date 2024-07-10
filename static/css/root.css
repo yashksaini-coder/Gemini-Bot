@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Mukta:wght@200;300;400;500;600;700;800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    font-family: "Mulish", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+div.container{
+    width: 50vw;
+    min-height: 80vh;
+    padding: 1rem;
+    box-sizing: border-box;
+    /* border: 1px solid rgba(255, 255, 255, 0.521);
+    border-radius: 1rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5rem;
+}
+div.container div#logo_desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* outline: 2px solid green; */
+}
+div.container div#logo_desc p{
+    margin-top: 1.2rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+div.container div#logo_desc p span{
+    font-weight: 400;
+    font-size: 1.8rem;
+    background: #00FF00;
+    background: linear-gradient(to left, #ad1ca6 0%, #00FFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration-color: transparent;
+}
+
+div.container div#logo_desc img{
+    height: 13rem;
+    width: 15rem;
+    aspect-ratio: 1;
+}
+
+div.container div#links{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    /* outline: 1px solid red; */
+}
+div.container div#links a{
+    display: inline-flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    width: 13.5rem;
+    aspect-ratio: 1.5/1;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    transition: all 0.15s ease-out;
+}
+div.container div#links a i{
+    font-size: 3rem;
+}
+div.container div#links a:nth-child(1){
+    background: #4776E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8E54E9, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+div.container div#links a:nth-child(2){
+    background: #ec008c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+div.container div#links a:hover{
+    transform: scale(0.95);
+}
+
+@media screen and (max-width: 640px) {
+    div.container{
+        width: 90vw !important;
+        min-height: 85vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    div.container div#logo_desc img{
+        height: 9rem;
+    }
+    div.container div#logo_desc p{
+        font-size: 1rem;
+    }
+    div.container div#logo_desc p span{
+        font-size: 1.2rem;
+    }
+    div.container div#links{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    div.container div#links a{
+        width: 66%;
+        aspect-ratio: 1.6/1;
+    }
+    div.container div#links a i{
+        font-size: 2rem;
+    }
+}

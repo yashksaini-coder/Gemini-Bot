@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Mukta:wght@200;300;400;500;600;700;800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Mulish", sans-serif;
+}
+body{
+    width: 100vw;
+    background-color: rgb(36, 36, 37);
+    color: white;
+    overflow-x: hidden;
+}
+header{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    height: 3.5rem;
+    font-size: 1.25rem;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    position: fixed;
+    top: 0;
+    z-index: 8;
+}
+header div#home{
+    width: 2rem;
+    margin-left: 1rem;
+    position: absolute;
+    top: auto;
+    aspect-ratio: 1/1;
+    z-index: 10;
+}
+header div#home a{
+    width: 100%;
+    height: 100%;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+header div#chat_options{
+    width: 100%;
+    /* outline: 1px solid red; */
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+div#chat_options p{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 0.7px solid rgba(255, 255, 255, 0.511);
+    background-color: rgb(44, 43, 43);
+}
+div#chat_options p:hover{
+    background-color: rgb(36, 35, 35);
+}
+div#chat_options p i{
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    transition: all 0.12s ease-in;
+}
+div#chat_options ul{
+    position: absolute;
+    top: 2.8rem;
+    border-radius: 5px;
+    border: 0.7px solid rgba(255, 255, 255, 0.511);
+    background-color: rgb(31, 31, 31);
+    overflow: hidden;
+    display: none;
+    transition: all 0.2s ease-in;
+}
+div#chat_options ul li{
+    list-style-type: none;
+}
+div#chat_options ul li a{
+    display: block;
+    padding: 0.5rem 2.3rem 0.5rem 0.8rem;
+    color: white;
+    text-decoration: none;
+}
+div#chat_options ul li a:hover{
+    background-color: rgb(44, 43, 43);
+}
+div#query_area{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    background-color: rgb(31, 31, 31);
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 100%;
+}
+div#query_area div.text_btn{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+div#query_area textarea{
+    min-height: 2.2rem;
+    padding: 0.75rem 0.7rem;
+    border: 1px solid grey;
+    /* overflow-y: auto; */
+    border-radius: 10px;
+    outline: none;
+    font-size: 0.95rem;
+    width: 100%;
+    background-color: rgb(44, 43, 43);
+    color: white;
+    resize: none;
+}
+div#query_area button#submit{
+    position: absolute;
+    height: min-content;
+    padding: 0 !important;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    outline: none;
+    padding: 0.1rem 0.2rem !important;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    right: 1rem;
+}
+div#query_area button#submit span{
+    padding: 0 !important;
+}
+div.chats{
+    margin: 6rem auto;
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+}
+
+div.chats div.chat{
+    margin-bottom: 1.35rem;
+}
+div.chat div.user{
+    margin-bottom: 1.05rem;
+}
+div.chat div.user span, div.chat div.gemini span{
+    font-weight: 700;
+}
+div.user div:nth-child(1), div.gemini div:nth-child(1){
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+div.user img.avatar, div.gemini img.avatar{
+    height: 27px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: rgb(28, 27, 27);
+    outline: 0.1px solid rgba(255, 255, 255, 0.687);
+}
+div.chat div.user p, div.chat div.gemini p{
+    margin-top: 0.5rem;
+}
+div.gemini p a{
+    color: rgb(0, 119, 255);
+}
+div.gemini p a:hover{
+    text-decoration: none;
+}
+div.chats div.chat h4:nth-child(2){
+    margin-top: 0.5rem;
+}
+div.user p, div.gemini p{
+    line-height: 1.5;
+}
+div#loading_div{
+    display: flex;
+    align-items: center;
+}
+span#loading{
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 3px solid rgb(132, 132, 132);
+    border-top: 3px solid white;
+    animation: loading 0.35s linear infinite;
+    border-radius: 50%;
+}
+@keyframes loading {
+    from{
+        transform: rotate(0);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+@media screen and (max-width: 640px){
+    header{
+        height: 3rem;
+    }
+    header div#home{
+        margin-left: 0.5rem;
+    }
+    header div#home a{
+        font-size: 1.5rem;
+    }
+    div#chat_options p{
+        padding: 0.4rem 0.9rem;
+        font-size: 1rem;
+    }
+    div#chat_options ul{
+        font-size: 1rem;
+    }
+    div.chats{
+        width: 75vw;
+        margin: 5rem auto;
+    }
+
+    div#query_area{
+        justify-content: center;
+        bottom: -1px;
+    }
+    div#query_area textarea{
+        padding: 0.5rem 0.7rem;
+    }
+    div#query_area div.text_btn{
+        width: 90%;
+    }
+}
