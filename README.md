@@ -7,7 +7,6 @@
 Welcome to Gemini-Bot, your intelligent companion designed to revolutionize the way you interact with information. Leveraging the power of the Gemini AI platform, Gemini-Bot provides a seamless and intuitive interface for users to make both text and image queries. Whether you're looking for quick answers, detailed explanations, or visual insights, Gemini-Bot is here to assist you. With its advanced features like session storage and the use of the Fetch API for efficient server communication, Gemini-Bot ensures a smooth and engaging user experience. Get ready to explore a world of information at your fingertips with Gemini-Bot.
 
 
-
 ## Features
 
 1. **Text and Image Queries**: Gemini-Bot allows users to make both text and image queries to the Gemini AI platform.
