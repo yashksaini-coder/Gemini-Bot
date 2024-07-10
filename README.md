@@ -1,57 +1,59 @@
-# Gemini Bot
+## Introduction
 
-## Overview
-Gemini Bot is a conversational agent powered by a generative model from Google's GenerativeAI service. It allows users to engage in text-based conversations by asking questions or initiating discussions. The bot utilizes Streamlit, a Python library for building interactive web applications, to create a user-friendly interface for interaction.
+Welcome to FlaskGem, an AI-based web application created using Flask. FlaskGem utilizes the Gemini AI platform to provide text and image query capabilities. This documentation will guide you through the features and usage of FlaskGem.
 
-## Requirements
-- Python 3.11
-- Streamlit
-- Google GenerativeAI account and API key
+![Logo](./static/ai_bot.png)
 
-## Installation
-1. Clone GitHub repository:- <br>
-<code>git clone https://github.com/yashksaini-coder/Gemini-Bot</code>
+## Features
 
-2. Install the required Python packages using pip:-<br>
-<code>pip install streamlit google-generativeai</code>
+1. **Text and Image Queries**: FlaskGem allows users to make both text and image queries to the Gemini AI platform.
+2. **Session Storage**: User queries and corresponding answers are stored in the sessionStorage, ensuring that chats are retained even after page reloads.
+3. **Fetch API**: The Fetch API is used to send requests to the Flask server, enabling seamless communication without page reloads.
 
-3. Obtain a Google GenerativeAI API key by signing up for an account and following the instructions provided by Google.
-4. Set the API key as an environment variable named `GOOGLE_API_KEY`.
+## Getting Started
 
-## Running the Application
-### To run the Gemini Bot application:-
+### Requirements
 
-1. Navigate to the directory where the `gemini-bot.py` file is located.
-2. Run the Streamlit application using the following command:-<br>
-<code>streamlit run gemini-bot.py</code>
+- Web browser (Chrome, Firefox, Safari, etc.)
+- Internet connection
 
+### Installation
 
-3. The application will start, and you should see the title "Gemini Bot" displayed in your browser.
+1. Clone the FlaskGem repository from GitHub.
+   ```bash
+   git clone https://github.com/yashksaini-coder/Gemini-Bot
+   ```
+2. Navigate to the FlaskGem directory.
+   ```bash
+   cd Gemini-Bot
+   ```
+3. Install the packages from requirements.txt
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Run `python app.py` from your preferred terminal.
 
-## Usage
-Once the Gemini Bot application is running, users can interact with the bot by typing their queries or messages into the chat input field provided.
+### Usage
 
-### Conversation Flow
-1. Upon starting the application, the bot welcomes the user and prompts them to ask a question or start a conversation.
-2. Users can type their queries or messages in the chat input field and press Enter to submit.
-3. The bot processes the user input and generates a response based on the provided query.
-4. The conversation history is displayed in the chat interface, showing messages from both the user and the bot.
+1. **Text Queries**:
+   - Enter your text query in the text input field.
+   - Press the "Send" button or hit Enter to submit the query.
+   - View the response from the Gemini AI platform in the chat interface.
 
-### Features
-- **Chat Interface**:- The application provides a chat-like interface where users can type messages and receive responses from the bot.
-- **Dynamic Interaction**:- The bot dynamically updates the conversation history with each user interaction.
-- **Google GenerativeAI Integration**:- Gemini Bot leverages Google's GenerativeAI service to generate responses to user queries.
+2. **Image Queries**:
+   - Click the "Upload Image" button.
+   - Select an image file from your device.
+   - Enter your specific query for the image.
+   - Wait for the response from the Gemini AI platform, which will be displayed in the chat interface.
 
-## Working
-- The application utilizes the `google.generativeai` module to interact with the GenerativeAI service.
-- User messages and bot responses are stored in the `st.session_state.messages` list to maintain conversation history.
-- The `llm_function` method processes user queries, generates responses using the GenerativeAI model, and updates the conversation history.
+3. **Session Storage**:
+   - User queries and responses are stored in sessionStorage.
+   - This ensures that chats are retained even if the page is reloaded or navigated away from.
 
-## Future Improvements
-- Integration with additional conversational AI models for enhanced response generation.
-- Implementation of natural language understanding (NLU) techniques to improve the bot's ability to understand user queries.
-- Support for multimedia content such as images, videos, and links within the chat interface.
-- Adding langchain to provide chat with pdf, text, csv documents.
+4. **Fetch API**:
+   - The Fetch API is used to send requests to the Flask server.
+   - This communication method avoids page reloads, providing a smoother user experience.
 
-## Conclusion
-Gemini Bot provides a simple yet effective platform for engaging in text-based conversations powered by state-of-the-art generative models. By leveraging Streamlit and Google's GenerativeAI service, the application offers a seamless user experience and demonstrates the potential of AI-driven conversational interfaces.
+3. **API Key**:
+   - Please obtain your own API key from the Gemini AI platform at [https://ai.google.dev/](https://ai.google.dev/).
+   - Replace the placeholder API key in the (`.env`) file with your own API key for proper functionality.
