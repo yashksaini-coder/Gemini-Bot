@@ -1,12 +1,12 @@
 ## Introduction
 
-Welcome to FlaskGem, an AI-based web application created using Flask. FlaskGem utilizes the Gemini AI platform to provide text and image query capabilities. This documentation will guide you through the features and usage of FlaskGem.
+Welcome to Gemini-Bot, your intelligent companion designed to revolutionize the way you interact with information. Leveraging the power of the Gemini AI platform, Gemini-Bot provides a seamless and intuitive interface for users to make both text and image queries. Whether you're looking for quick answers, detailed explanations, or visual insights, Gemini-Bot is here to assist you. With its advanced features like session storage and the use of the Fetch API for efficient server communication, Gemini-Bot ensures a smooth and engaging user experience. Get ready to explore a world of information at your fingertips with Gemini-Bot.
 
-![Logo](./static/ai_bot.png)
+
 
 ## Features
 
-1. **Text and Image Queries**: FlaskGem allows users to make both text and image queries to the Gemini AI platform.
+1. **Text and Image Queries**: Gemini-Bot allows users to make both text and image queries to the Gemini AI platform.
 2. **Session Storage**: User queries and corresponding answers are stored in the sessionStorage, ensuring that chats are retained even after page reloads.
 3. **Fetch API**: The Fetch API is used to send requests to the Flask server, enabling seamless communication without page reloads.
 
@@ -19,11 +19,11 @@ Welcome to FlaskGem, an AI-based web application created using Flask. FlaskGem u
 
 ### Installation
 
-1. Clone the FlaskGem repository from GitHub.
+1. Clone the Gemini-Bot repository from GitHub.
    ```bash
    git clone https://github.com/yashksaini-coder/Gemini-Bot
    ```
-2. Navigate to the FlaskGem directory.
+2. Navigate to the Gemini-Bot directory.
    ```bash
    cd Gemini-Bot
    ```
