@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to text</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="{{url_for('static', filename = '/css/style.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename = 'ai_bot.png')}}" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div id="home">
+            <a href="/">
+                <i class="fa-solid fa-house"></i>
+            </a>
+        </div>
+        <div id="chat_options">
+            <p id="selected_option">Text to text <i class="fa-solid fa-chevron-down"></i></p>
+            <ul id="options">
+                <li><a href="/chat">Text to text</a></li>
+                <li><a href="/image_chat">Image to text</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="chats">
+    </div>
+    <div id="query_area">
+        <div class="text_btn">
+            <textarea name="query" id="query" placeholder="Message FlaskGem..."></textarea>
+            <button id="submit">
+                <span class="material-symbols-outlined">
+                    send
+                </span>
+            </button>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename = '/js/app.js')}}"></script>
+    <script src="{{url_for('static', filename = '/js/additional.js')}}"></script>
+</body>
+</html>
