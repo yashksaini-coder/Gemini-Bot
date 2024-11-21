@@ -52,7 +52,7 @@ def image_chat():
         try:
             response = img_model.generate_content(
                 [q, image])   # Generate content for the image
-        except:
+        except:  # noqa: E722
             return jsonify("Something went wrong!")
         return jsonify(markdown(response.text))
     else:

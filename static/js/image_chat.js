@@ -60,7 +60,7 @@ ask_btn.addEventListener("click", async function () {
         let gemini_response = document.createElement('div')
         gemini_response.setAttribute('class', 'gemini')
         let gemini_avatar_div = document.createElement('div')
-        gemini_avatar_div.innerHTML = `<img class="avatar" src="static/flask_gem_avatar.png"/> <span>Gemini-Bot</span>`
+        gemini_avatar_div.innerHTML = `<img class="avatar" src="static/person_avatar"/> <span>Gemini-Bot</span>`
         let gemini_ans = document.createElement('p')
         gemini_ans.innerHTML = "<div id='loading_div'>Generating your content<span id = 'loading'></span></div>"
         gemini_response.append(gemini_avatar_div, gemini_ans)
